@@ -1,0 +1,89 @@
+@media all and (max-width: 900px){
+    #headercontent .headerbox{
+        width: 100%;
+        border-radius: 59% 41% 0% 0% / 35% 63% 37% 0%;
+    }
+    #columns,
+    .contentboxen .content-inner{
+        flex-direction: column;
+    }
+    #columns #column,
+    .box{
+        width: 100%;
+    }
+    main.site{
+        padding-top: 60px;
+    }
+}
+
+@media all and (max-width: 700px){
+    h1{
+        font-size: 40px;
+    }
+    .row{
+        width: 50%;
+    }
+    #navbar li a{
+        font-size: 40px;
+    }
+    .numberedtext span{
+        display: none;
+    }
+    .numberedtext{
+        padding: 20px 0;
+    }
+    .box,
+    .boxrechner{
+        margin: 20px 0;
+    }
+}
+
+@media all and (max-width: 520px){
+    #rightnav,
+    #logo{
+        padding: 0 20px;
+    }
+    .content-inner{
+        padding: 40px 30px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 28px
+    }
+    h3{
+        font-size: 22px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    h5{
+        font-size: 18px;
+    }
+    p,
+    button{
+        font-size: 14px;
+    }
+    .row{
+        width: 100%;
+        padding: 10px;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+        margin: 0 0 10px 0;
+    }
+}
+
+@media all and (max-width: 400px){
+    #navbar li a{
+        font-size: 30px;
+    }
+    #navbar li {
+        padding: 10px 30px;
+    }
+}

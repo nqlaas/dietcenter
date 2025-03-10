@@ -1,0 +1,759 @@
+*,
+body,
+html{
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #F55839;
+    --second-color: #fdc147;
+    --third-color: #364156;
+    --fourd-color: #fff;
+    --darkmode: #19211a;
+    --long-transition: all 0.5s;
+    --short-transition: all 0.3s;
+}
+
+::selection{
+    background-color: var(--main-color);
+    color: var(--fourd-color);
+}
+
+main,
+header,
+footer{
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    z-index: 9999;
+    transition: var(--short-transition);
+}
+
+main.site{
+    padding-top: 120px;
+}
+
+#maincontent{
+    padding: 50px 0;
+}
+
+ul,
+li{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: "fields", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    max-width: 800px;
+    margin: 0 0 20px 0;
+}
+
+p{
+    font-size: 18px;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+h4{
+    font-size: 25px;
+}
+
+h5{
+    font-size: 22px;
+}
+
+.content-inner{
+    padding: 40px 50px;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#columns{
+    display: flex;
+    gap: 30px;
+}
+
+#columns #column{
+    width: 50%;
+}
+
+#column img{
+    border-radius: 30px;
+}
+
+select,
+input{
+    border: 2px solid var(--main-color);
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+label{
+    padding: 5px 10px;
+}
+
+option{
+    color: var(--third-color);
+}
+
+/* Colors */
+
+footer{
+    background-color: var(--main-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: var(--main-color);
+}
+
+p,
+a,
+div,
+input,
+label,
+select{
+    font-family: "como", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--third-color);
+}
+
+footer a,
+footer h4,
+span.material-symbols-outlined{
+    color: var(--fourd-color);
+}
+
+/* Change Colors for dark/whitemode */
+
+body.darkmode,
+body.darkmode #header.scroll-header{
+    background-color: var(--darkmode);
+}
+
+body.darkmode p,
+body.darkmode div,
+body.darkmode span,
+body.darkmode button,
+body.darkmode label,
+body.darkmode input,
+body.darkmode select,
+body.darkmode .linkblock h3,
+body.darkmode .linkblock h3 span{
+    color: var(--fourd-color);
+}
+
+body.darkmode .content-inner .linkblock a::after{
+    background: var(--fourd-color);
+}
+
+body.darkmode .feld{
+    border-color: var(--fourd-color);
+}
+
+/* Design for new List */
+
+.content-inner ul{
+    padding: 20px 0;
+}
+
+.content-inner li::before{
+    content: "\f061";
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    margin-top: 3px;
+}
+
+.content-inner li p{
+    padding-left: 20px;
+}
+
+/* Design for Links */
+
+a{
+    text-decoration: none;
+    position: relative;
+    display: block;
+    position: relative;
+    max-width: max-content;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.content-inner a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: var(--short-transition);
+}
+
+.content-inner .linkblock a::after{
+    background: var(--third-color);
+}
+
+footer .content-inner a::after{
+    background: var(--fourd-color);
+}
+
+.content-inner a:hover::after{
+    width: 100%;
+}
+
+/* Button Design */
+
+button{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--third-color);
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 20px 0;
+    padding: 10px 25px;
+}
+
+button:hover{
+    font-style: italic;
+    background-color: var(--main-color);
+    color: var(--fourd-color);
+}
+
+/* Design for Navigation & Header */
+
+.homeheader #logo a{
+    color: var(--fourd-color);
+}
+
+.homeheader #changebutton{
+    background-color: var(--fourd-color);
+    color: var(--main-color);
+}
+
+.homeheader #rightnav a{
+    color: var(--fourd-color);
+}
+
+.homeheader .icon-nav{
+    background-color: var(--fourd-color);
+}
+
+.homeheader .dd-burger span{
+    background: var(--main-color);
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+#logo a{
+    font-size: 30px;
+    color: var(--main-color);
+    font-family: "fields", sans-serif;
+}
+
+#logo a:hover{
+    font-style: italic;
+}
+
+#navigation{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 120px;
+}
+
+#changebutton{
+    padding: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: var(--main-color);
+    color: var(--fourd-color);
+}
+
+#navbar{
+    display: none;
+    width: 100%;
+    background: var(--main-color);
+    height: 100vh;
+    position: fixed;
+}
+
+#navbar.opened{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#navbar li{
+    padding: 10px 60px;
+}
+
+#navbar li a{
+    font-weight: 600;
+    font-size: 70px;
+    color: var(--fourd-color);
+    font-family: "fields", sans-serif;
+    transition: var(--short-transition);
+}
+
+#navbar li a:hover {
+    letter-spacing: 10px;
+  }
+
+#rightnav{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    gap: 20px;
+}
+
+#rightnav a{
+    font-size: 20px;
+    color: var(--main-color);
+    font-family: "fields", sans-serif;
+}
+
+#header.scroll-header{
+    background: #fff;
+}
+
+#header.scroll-header #rightnav a,
+#header.scroll-header #logo a{
+    color: var(--main-color);
+}
+
+#header.scroll-header .dd-burger span{
+    background: var(--fourd-color);
+}
+
+#header.scroll-header #changebutton{
+    background-color: var(--main-color);
+    color: var(--fourd-color);
+}
+
+#header.scroll-header .icon-nav{
+    background: var(--main-color);
+}
+
+#header #navigation.openednav #changebutton,
+#header #navigation.openednav .icon-nav{
+    background-color: var(--fourd-color);
+    color: var(--main-color);
+}
+
+#header #navigation.openednav .dd-burger span{
+    background: var(--main-color);
+}
+
+#header.scroll-header #navigation.openednav #changebutton,
+#header.scroll-header #navigation.openednav .icon-nav{
+    background-color: var(--fourd-color);
+    color: var(--main-color);
+}
+
+#header.scroll-header #navigation.openednav .dd-burger span{
+    background: var(--main-color);
+}
+
+/* Design for Burger Menu */
+
+.icon-nav{
+    display: block;
+    padding: 20px;
+    background: var(--main-color);
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+}
+
+.dd-burger {
+    margin-top: .2em;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    transform: rotate(0);
+    transition: var(--short-transition);
+    cursor: pointer;
+}
+.dd-burger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: var(--fourd-color);
+    border-radius: 9px;
+    opacity: 1;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transition: var(--short-transition);
+    transition: var(--short-transition);
+}
+.dd-burger span:nth-child(1) {
+    top: 0;
+}
+.dd-burger span:nth-child(2), .dd-burger span:nth-child(3) {
+    top: 10px;
+}
+.dd-burger span:nth-child(4) {
+    top: 20px;
+}
+
+.icon-nav{
+	transition:  var(--short-transition);
+	transition-timing-function: ease;
+}
+.burger .dd-burger span:nth-child(2), .dd-burger span:nth-child(3){
+    display: none;
+}
+.burger .dd-burger span:nth-child(4){
+    transform: rotate(45deg);
+    top: 10px;
+}
+.burger .dd-burger span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+/* Design for Headercontent */
+
+#headercontent{
+    height: 100vh;
+    background-image: url(../img/healthy_food.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Design for Teaserboxen */
+
+.teaserboxlayout{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    position: relative;
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: calc(33.3333% - 40px);
+    height: 400px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.box::before{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    background: linear-gradient(180deg,transparent 50%,#f55839);
+}
+
+.box h4, .box p {
+    position: relative;
+    color: var(--fourd-color);
+    z-index: 1;
+}
+
+.box:nth-child(1){
+    background-image: url(../img/box.png)
+}
+
+.box:nth-child(2){
+    background-image: url(../img/box.png)
+}
+
+.box:nth-child(3){
+    background-image: url(../img/box.png)
+}
+
+/* Design for numbered Text */
+
+.numberedtext{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.numberedtext span{
+    font-size: 80px;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--third-color);
+    font-family: "fields", sans-serif;
+    min-width: 120px;
+}
+
+/* Design for linkblock */
+
+.linkblock h3{
+    color: var(--third-color);
+}
+
+.linkblock h3 span{
+    transition:  var(--short-transition);
+    color: var(--third-color);
+}
+
+.linkblock h3:hover span{
+    margin-left: 5px;
+}
+
+/* Design for Rechner */
+
+.boxrechner{
+    position: relative;
+    padding: 30px;
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 2px solid var(--main-color);
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+}
+
+.result{
+    padding: 0 10px;
+}
+
+#calculator div{
+    display: flex;
+    flex-direction: column;
+}
+
+#calculator{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Design for Tic-Tac-Toe */
+
+.tic-tac-toe{
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 2px solid var(--main-color);
+}
+
+.spielanzeige{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.overlay-text {
+    font-size: clamp(2rem, 10vh, 4rem);
+    font-weight: 900;
+    text-align: center;
+}
+
+.spielfeld {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.spielfeld button{
+    border-radius: 0;
+    margin: 0;
+}
+
+.spielfeld button:hover {
+    font-style: normal;
+    background-color: transparent;
+    color: transparent;
+}
+
+.feld {
+    background-color: transparent;
+    border: 0.5rem solid var(--third-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    aspect-ratio: 1 / 1;
+}
+
+.feld:nth-child(-n + 3) {
+    border-top: none;
+}
+
+.feld:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.feld:nth-child(n + 7) {
+    border-bottom: none;
+}
+
+.feld:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.feld::before,
+.feld::after {
+    content: "";
+    box-sizing: border-box;
+}
+
+.feld.spieler::before,
+.spielanzeige.spieler~.spielfeld .feld:not([disabled]):hover::before {
+    border: 1rem solid var(--main-color);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.feld.gegner::before,
+.feld.gegner::after {
+    background-color: var(--third-color);
+    width: 1rem;
+    height: 100%;
+}
+
+.feld.gegner::before {
+    transform: translateX(50%) rotate(45deg);
+}
+
+.feld.gegner::after {
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.spielanzeige.spieler,
+.overlay-text.spieler {
+    color: var(--main-color);
+}
+
+.spielanzeige.gegner {
+    color: var(--third-farbe);
+}
+
+.overlay-text{
+    color: var(--main-color);
+}
+
+.spielanzeige.spieler~.spielfeld .feld:not([disabled]) {
+    cursor: pointer;
+}
+
+.spielanzeige.spieler~.spielfeld .feld:not([disabled]):hover::before {
+    opacity: 0.3;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    inset: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 2vh, 4rem);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay-button {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--fourd-color);
+    padding: 0.5em 1em;
+    border-radius: 2rem/50%;
+    cursor: pointer;
+}
+
+.overlay.sichtbar {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 1.5s;
+}
+
+/* Design for Footer */
+
+footer .content-inner{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.row{
+    width: 33.3333%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+footer .content-inner .row a{
+    font-size: 19px;
+    padding: 5px 0;
+}
+
+footer .content-inner .row h4{
+    font-size: 30px;
+    padding: 5px 0;
+}
